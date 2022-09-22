@@ -39,6 +39,7 @@ public class DrawerLayoutAct2 extends AppCompatActivity implements View.OnClickL
 
         AppCenter.start(getApplication(), "335d73e5-e740-41c8-8af2-4763fd49304e",
                 Analytics.class, Crashes.class);
+        Analytics.trackEvent("My custom event");
     }
 
     private void initViews() {
