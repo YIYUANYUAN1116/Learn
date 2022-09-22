@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fujitsu.pfu.learn">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Learn"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".drawerlayout.DrawerLayoutDemo"
+            android:exported="false" />
+
+        <activity
+            android:name=".act.ListStoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".act.MyBroadcastReceiverAct"
+            android:exported="false" />
+        <activity
+            android:name=".act.ServiceTestActivity"
+            android:exported="false" />
+
+        <receiver android:name=".receiver.MyBRReceiver2" />
+        <receiver
+            android:name=".receiver.MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.TestService1" />
+        <service android:name=".service.TestService2" />
+        <service android:name=".service.TestService3" />
+
+        <activity
+            android:name=".act.ServiceTestActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".act.ForegroundDemoAct"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".act.SimpleDialogAct"
+            android:exported="false" />
+        <activity android:name=".drawerlayout.Drawer1Act" />
+
+        <activity
+            android:name=".act.DrawerLayoutAct2"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
