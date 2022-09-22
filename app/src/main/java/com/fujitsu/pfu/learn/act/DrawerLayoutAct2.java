@@ -37,7 +37,7 @@ public class DrawerLayoutAct2 extends AppCompatActivity implements View.OnClickL
         fg_left_menu = (LeftFragment) fManager.findFragmentById(R.id.fg_left_menu);
         initViews();
 
-        AppCenter.start(getApplication(), "{61688017-bf1e-4343-9957-a6e225d5f286}",
+        AppCenter.start(getApplication(), "335d73e5-e740-41c8-8af2-4763fd49304e",
                 Analytics.class, Crashes.class);
     }
 
